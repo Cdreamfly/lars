@@ -1,6 +1,6 @@
 TARGET=lib/libreactor.a
 CXX=g++
-CFLASS= -g -O2  -Wall -fPIC
+CFLASS=-std=c++11 -g -O2  -Wall -fPIC
 
 SRC=./src
 INC=-I./include
