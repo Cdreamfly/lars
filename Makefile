@@ -9,6 +9,7 @@ OBJS=$(addsuffix .o, $(basename $(wildcard $(SRC)/*.cpp)))
 $(TARGET): $(OBJS)
 	mkdir -p lib
 	ar cqs $@ $^
+	-rm -rf src/*.o
 
 %.o:%.cpp
 	$(CXX) $(CFLASS) -c -o $@ $< $(INC)
