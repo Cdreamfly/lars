@@ -13,9 +13,11 @@ public:
     // 将已经处理过的数据，清空,将未处理的数据提前至数据首地址
     void AdJust();
 
-private:
+public:
     // 如果存在多个buffer，是采用链表的形式链接起来
-    Buffer *buffer;
+    Buffer *next;
+
+private:
     // 当前buffer的缓存容量大小
     int capacity;
     // 当前buffer有效数据长度

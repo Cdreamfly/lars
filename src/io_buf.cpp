@@ -2,7 +2,7 @@
 #include <cassert>
 #include <cstring>
 
-Buffer::Buffer(const int size) : capacity(size), length(0), head(0), buffer(nullptr)
+Buffer::Buffer(const int size) : capacity(size), length(0), head(0), next(nullptr)
 {
     data = new char[size];
     assert(data);
